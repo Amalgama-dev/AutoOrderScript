@@ -1,0 +1,6 @@
+name = ''
+number = '' 
+street = ''
+house = ''
+entrance = ''
+apartment = ''
