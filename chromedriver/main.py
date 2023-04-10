@@ -8,13 +8,9 @@ url = "https://mafia.ua/kiev/product/kombo-menyu-gamburger-13882"
 driver = webdriver.Chrome(executable_path='./driver/chromedriver')
 
 
-
 try:
     driver.get(url=url)
-    time.sleep(3)
-    html = driver.find_element(By.XPATH, '/html')
-    for i in range(13):
-        html.send_keys(Keys.DOWN)
+    driver.fullscreen_window()
     time.sleep(3)
     driver.find_element(By.XPATH, '/html/body/main/section/div[1]/div/div[3]/div[3]/div[1]/a').click()
     time.sleep(2)
@@ -23,6 +19,7 @@ try:
     driver.find_element(By.XPATH, '//*[@id="popup-cart"]/div/div[3]/a').click()
     time.sleep(2)
     htmlcart = driver.find_element(By.XPATH, '/html')
+    driver.fullscreen_window()
     for i in range(15):
         htmlcart.send_keys(Keys.DOWN)
     time.sleep(2)
